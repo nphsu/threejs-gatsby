@@ -1,3 +1,4 @@
+// TODO: solve the problem of moving the slider
 import React, { useEffect, createRef } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'

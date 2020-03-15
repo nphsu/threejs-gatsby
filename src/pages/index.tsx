@@ -3,13 +3,14 @@ import { Link } from 'gatsby'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
-// import BaseThreeScene from '../components/three/BaseThreeScene'
-import MultiThreeScene from '../components/three/MultiThreeScene'
+import BaseThreeScene from '../components/three/BaseThreeScene'
+// Custom Scene
+// import MultiThreeScene from '../components/three/MultiThreeScene'
 
 const IndexPage = () => {
   return (
     <IndexLayout>
-      <MultiThreeScene />
+      <BaseThreeScene />
       <Page>
         <Container>
           <h1>Hi people</h1>
