@@ -9,7 +9,7 @@
 
 ## URL
 
-[Sample Page](gatsby-threejs.netlify.com)
+[Sample Page](https://gatsby-threejs.netlify.com/)
 
 ## :fire: Status
 
