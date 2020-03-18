@@ -6,11 +6,13 @@ import IndexLayout from '../layouts'
 import BaseThreeScene from '../components/three/BaseThreeScene'
 // Custom Scene
 // import MultiThreeScene from '../components/three/MultiThreeScene'
+import GradientScene from '../components/three/GradientScene'
 
 const IndexPage = () => {
   return (
     <IndexLayout>
-      <BaseThreeScene />
+      <GradientScene />
+      {/* <BaseThreeScene /> */}
       <Page>
         <Container>
           <h1>Hi people</h1>
