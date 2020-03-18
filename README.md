@@ -4,15 +4,20 @@
   </a>
 </p>
 <h1 align="center">
-  gatsby-starter-typescript-plus
+  Three.js with Gatsby and TypeScript
 </h1>
 
-> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
+## URL
 
-This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
+[Sample Page](gatsby-threejs.netlify.com)
+
+## :fire: Status
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b5452bb6-481b-40d3-b9e8-d3f2e9756700/deploy-status)](https://app.netlify.com/sites/gatsby-threejs/deploys)
 
 ## 🗒️ Features
 
+- Three.js
 - TypeScript
 - ESLint (with custom ESLint rules)
 - Markdown rendering with Remark
@@ -88,7 +93,3 @@ This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites writte
 ## ❤️ Credits
 
 Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
