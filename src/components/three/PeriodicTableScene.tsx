@@ -1,9 +1,9 @@
 import React, { useEffect, createRef } from 'react'
-import { css, CSSObject } from '@emotion/core'
+import { css } from '@emotion/core'
 import * as THREE from 'three'
-import { TWEEN } from 'three/examples/jsm/libs/tween.module.min.js'
 import { TrackballControls } from 'three/examples/jsm/controls/TrackballControls.js'
 import { CSS3DRenderer, CSS3DObject } from 'three/examples/jsm/renderers/CSS3DRenderer.js'
+import TWEEN from '@tweenjs/tween.js'
 import { newTable } from './periodic/tables'
 
 const createDefaultCamera = () => {
