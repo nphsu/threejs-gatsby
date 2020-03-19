@@ -3,15 +3,19 @@ import { Link } from 'gatsby'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
-import BaseThreeScene from '../components/three/BaseThreeScene'
 // Custom Scene
+// import BaseThreeScene from '../components/three/BaseThreeScene'
 // import MultiThreeScene from '../components/three/MultiThreeScene'
-import GradientScene from '../components/three/GradientScene'
+// import GradientScene from '../components/three/GradientScene'
+// import PlaneLayerScene from '../components/three/PlaneLayerScene'
+import PeriodicTableScene from '../components/three/PeriodicTableScene'
 
 const IndexPage = () => {
   return (
     <IndexLayout>
-      <GradientScene />
+      <PeriodicTableScene />
+      {/* <PlaneLayerScene /> */}
+      {/* <GradientScene /> */}
       {/* <BaseThreeScene /> */}
       <Page>
         <Container>
