@@ -23,10 +23,10 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-responsive-iframe',
-            options: {
-              wrapperStyle: 'margin-bottom: 1rem'
-            }
+            resolve: 'gatsby-remark-responsive-iframe'
+            // options: {
+            //   wrapperStyle: 'margin-bottom: 1rem'
+            // }
           },
           'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
@@ -53,28 +53,28 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
-    // {
-    //   resolve: 'gatsby-plugin-manifest',
-    //   options: {
-    //     name: 'SHUN/小池駿平',
-    //     short_name: 'SHUN',
-    //     start_url: '/',
-    //     description: 'This application describes the personal skill and motication.',
-    //     lang: 'en',
-    //     // icon: 'src/images/person.png',
-    //     background_color: '#f7f0eb',
-    //     theme_color: '#a2466c',
-    //     display: 'standalone'
-    //   }
-    // },
-    // 'gatsby-plugin-offline',
-    // 'gatsby-plugin-robots-txt',
-    // {
-    //   resolve: 'gatsby-plugin-html-attributes',
-    //   options: {
-    //     lang: 'en'
-    //   }
-    // }
+    'gatsby-plugin-react-helmet',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'SHUN/小池駿平',
+        short_name: 'SHUN',
+        start_url: '/',
+        description: 'This application describes the personal skill and motication.',
+        lang: 'en',
+        // icon: 'src/images/person.png',
+        background_color: '#f7f0eb',
+        theme_color: '#a2466c',
+        display: 'standalone'
+      }
+    },
+    'gatsby-plugin-offline',
+    'gatsby-plugin-robots-txt',
+    {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en'
+      }
+    }
   ]
 }
