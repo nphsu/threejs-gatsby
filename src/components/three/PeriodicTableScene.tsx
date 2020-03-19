@@ -238,8 +238,12 @@ const PeriodicTableScene = () => {
           font-size: 12px;
           color: rgba(127, 255, 255, 0.75);
         }
+        .inline-box {
+          display: flex;
+        }
         .button {
-          color: rgba(127, 255, 255, 0.75);
+          /* color: black; */
+          color: rgba(102, 102, 153, 0.75);
           background: transparent;
           outline: 1px solid rgba(127, 255, 255, 0.75);
           border: 0px;
@@ -257,19 +261,21 @@ const PeriodicTableScene = () => {
         }
       `}
     >
+      <div className="inline-box">
+        <div className="button" id="table" ref={table}>
+          TABLE
+        </div>
+        <div className="button" id="sphere" ref={sphere}>
+          SPHERE
+        </div>
+        <div className="button" id="helix" ref={helix}>
+          HELIX
+        </div>
+        <div className="button" id="grid" ref={grid}>
+          GRID
+        </div>
+      </div>
       <div ref={mount} />
-      <div className="button" id="table" ref={table}>
-        TABLE
-      </div>
-      <div className="button" id="sphere" ref={sphere}>
-        SPHERE
-      </div>
-      <div className="button" id="helix" ref={helix}>
-        HELIX
-      </div>
-      <div className="button" id="grid" ref={grid}>
-        GRID
-      </div>
     </div>
   )
 }
