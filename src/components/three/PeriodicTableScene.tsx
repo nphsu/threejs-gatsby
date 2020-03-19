@@ -197,6 +197,9 @@ const PeriodicTableScene = () => {
   return (
     <div
       css={css`
+        body {
+          margin: 0px;
+        }
         background: linear-gradient(to bottom, #11e8bb 0%, #8200c9 100%);
         .element {
           width: 120px;
