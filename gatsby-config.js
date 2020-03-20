@@ -54,20 +54,20 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        name: 'SHUN/小池駿平',
-        short_name: 'SHUN',
-        start_url: '/',
-        description: 'This application describes the personal skill and motication.',
-        lang: 'en',
-        // icon: 'src/images/person.png',
-        background_color: '#f7f0eb',
-        theme_color: '#a2466c',
-        display: 'standalone'
-      }
-    },
+    // {
+    //   resolve: 'gatsby-plugin-manifest',
+    //   options: {
+    //     name: 'SHUN/小池駿平',
+    //     short_name: 'SHUN',
+    //     start_url: '/',
+    //     description: 'This application describes the personal skill and motication.',
+    //     lang: 'en',
+    //     // icon: 'src/images/person.png',
+    //     background_color: '#f7f0eb',
+    //     theme_color: '#a2466c',
+    //     display: 'standalone'
+    //   }
+    // },
     'gatsby-plugin-offline',
     'gatsby-plugin-robots-txt',
     {
