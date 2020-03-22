@@ -4,7 +4,7 @@ import * as THREE from 'three'
 import Stats from 'three/examples/jsm/libs/stats.module.js'
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js'
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js'
-import { OBJLoader2 } from 'three/examples/jsm/loaders/OBJLoader2.js'
+import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
 import { BloomPass } from 'three/examples/jsm/postprocessing/BloomPass.js'
 import { FocusShader } from 'three/examples/jsm/shaders/FocusShader.js'
 import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js'
@@ -41,14 +41,10 @@ const createDefaultRenderer = (mount: React.RefObject<HTMLInputElement>) => {
 
 function createMesh(positions, scene, scale, x, y, z, color) {
   const geometry = new THREE.BufferGeometry()
-  // geometry.setAttribute('position', positions.clone())
+  geometry.setAttribute('position', positions.clone())
   geometry.setAttribute('initialPosition', positions.clone())
-  // geometry.getAttribute('position')
-  const positionAttribute = new THREE.BufferAttribute(positions, 3)
-  positionAttribute.setUsage(THREE.DynamicDrawUsage)
-  geometry.setAttribute('position', positionAttribute)
 
-  // geometry.attributes.setUsage(THREE.DynamicDrawUsage)
+  geometry.attributes.position.setUsage(THREE.DynamicDrawUsage)
 
   const clones = [
     [6000, 0, -4000],
@@ -61,15 +57,13 @@ function createMesh(positions, scene, scale, x, y, z, color) {
 
     [0, 0, 0]
   ]
-
   let mesh
   for (let i = 0; i < clones.length; i++) {
     const c = i < clones.length - 1 ? 0x252525 : color
 
     mesh = new THREE.Points(geometry, new THREE.PointsMaterial({ size: 30, color: c }))
-    mesh.scale.x = scale
-    mesh.scale.y = scale
-    mesh.scale.z = scale
+    mesh.scale.x = mesh.scale.y = mesh.scale.z = scale
+
     mesh.position.x = x + clones[i][0]
     mesh.position.y = y + clones[i][1]
     mesh.position.z = z + clones[i][2]
@@ -92,8 +86,9 @@ function createMesh(positions, scene, scale, x, y, z, color) {
 
 function combineBuffer(model: THREE.Group, bufferName: string) {
   let count = 0
-  model.traverse(child => {
-    if (child.mesh) {
+
+  model.traverse(function (child) {
+    if (child.isMesh) {
       const buffer = child.geometry.attributes[bufferName]
 
       count += buffer.array.length
@@ -101,13 +96,12 @@ function combineBuffer(model: THREE.Group, bufferName: string) {
   })
 
   const combined = new Float32Array(count)
+  console.log(count)
 
   let offset = 0
-
   model.traverse(function (child) {
     if (child.isMesh) {
       const buffer = child.geometry.attributes[bufferName]
-
       combined.set(buffer.array, offset)
       offset += buffer.array.length
     }
@@ -117,48 +111,30 @@ function combineBuffer(model: THREE.Group, bufferName: string) {
 }
 
 const PointDynamicScene = () => {
-  // const url = '../../obj/male02/male03.obj'
-  // const [obj, set] = useState()
-  // useMemo(() => new OBJLoader2().load(url, set), [url])
-  // console.log(obj)
   const mount = createRef<HTMLInputElement>()
   useEffect(() => {
     const scene = createDefaultScene()
     const camera = createDefaultCamera()
     camera.lookAt(scene.position)
 
-    const loader = new OBJLoader2()
+    const loader = new OBJLoader()
 
-    loader.load(
-      '../../obj/male02/male02.obj',
-      // called when resource is loaded
-      object => {
-        object.traverse(child => {
-          console.log(child)
-          if (child instanceof THREE.Mesh) {
-            const c = child as THREE.Mesh
-            console.log(c.material)
-          }
-        })
-        object.position.set(0, 0, -53)
-        scene.add(object)
-      },
-      // called when loading is in progresses
-      function (xhr) {
-        console.log(`${(xhr.loaded / xhr.total) * 100}% loaded`)
-      },
-      // called when loading has errors
-      function (error) {
-        console.log('An error happened')
-      }
-    )
-    // loader.load('../../obj/male02/male02.obj', function (object: THREE.Group) {
-    //   const positions = combineBuffer(object, 'position')
-    //   createMesh(positions, scene, 4.05, -500, -350, 600, 0xff7744)
-    //   createMesh(positions, scene, 4.05, 500, -350, 0, 0xff5522)
-    //   createMesh(positions, scene, 4.05, -250, -350, 1500, 0xff9922)
-    //   createMesh(positions, scene, 4.05, -250, -350, -1500, 0xff99ff)
-    // })
+    loader.load('./male02.obj', function (object) {
+      const positions = combineBuffer(object, 'position')
+      createMesh(positions, scene, 4.05, -500, -350, 600, 0xff7744)
+      createMesh(positions, scene, 4.05, 500, -350, 0, 0xff5522)
+      createMesh(positions, scene, 4.05, -250, -350, 1500, 0xff9922)
+      createMesh(positions, scene, 4.05, -250, -350, -1500, 0xff99ff)
+    })
+    loader.load('./female02.obj', function (object) {
+      const positions = combineBuffer(object, 'position')
+
+      createMesh(positions, scene, 4.05, -1000, -350, 0, 0xffdd44)
+      createMesh(positions, scene, 4.05, 0, -350, 0, 0xffffff)
+      createMesh(positions, scene, 4.05, 1000, -350, 400, 0xff4422)
+      createMesh(positions, scene, 4.05, 250, -350, 1500, 0xff9955)
+      createMesh(positions, scene, 4.05, 250, -350, 2500, 0xff77dd)
+    })
 
     const renderer = createDefaultRenderer(mount)
 
