@@ -1,8 +1,9 @@
 import React, { useEffect, createRef } from 'react'
 import { css } from '@emotion/core'
 import * as THREE from 'three'
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js'
+import { OBJLoader2 } from 'three/examples/jsm/loaders/OBJLoader2.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+// import { OBJLoader } from './loader/OBJLoader'
 
 const createDefaultCamera = () => {
   const fov = 45
@@ -44,7 +45,7 @@ const ObjLoaderScene = () => {
     const helper = new THREE.GridHelper(1200, 60, 0xff4444, 0x404040)
     scene.add(helper)
 
-    const objLoader = new OBJLoader()
+    const objLoader = new OBJLoader2()
     objLoader.load('https://threejsfundamentals.org/threejs/resources/models/windmill/windmill.obj', root => {
       scene.add(root)
     })

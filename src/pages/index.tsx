@@ -10,11 +10,14 @@ import IndexLayout from '../layouts'
 // import PlaneLayerScene from '../components/three/PlaneLayerScene'
 import PeriodicTableScene from '../components/three/PeriodicTableScene'
 import PointDynamicScene from '../components/three/PointDynamicScene'
+import ObjLoaderScene from '../components/three/ObjLoaderScene'
+import GLTFScene from '../components/three/GLTFScene'
 
 const IndexPage = () => {
   return (
-    <PeriodicTableScene />
-    // <PointDynamicScene />
+    // <PeriodicTableScene />
+    // <PeriodicTableScene />
+    <PointDynamicScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
