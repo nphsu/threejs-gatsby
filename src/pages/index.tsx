@@ -17,7 +17,7 @@ const IndexPage = () => {
   return (
     // <PeriodicTableScene />
     // <PeriodicTableScene />
-    <PointDynamicScene />
+    <GLTFScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
