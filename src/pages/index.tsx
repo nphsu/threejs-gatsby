@@ -12,12 +12,13 @@ import PeriodicTableScene from '../components/three/PeriodicTableScene'
 import PointDynamicScene from '../components/three/PointDynamicScene'
 import ObjLoaderScene from '../components/three/ObjLoaderScene'
 import GLTFScene from '../components/three/GLTFScene'
+import BufferLineScene from '../components/three/BufferLineScene'
 
 const IndexPage = () => {
   return (
     // <PeriodicTableScene />
     // <PeriodicTableScene />
-    <GLTFScene />
+    <BufferLineScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>

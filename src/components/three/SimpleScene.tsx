@@ -19,7 +19,7 @@ const createDefaultRenderer = (mount: React.RefObject<HTMLInputElement>) => {
   return renderer
 }
 
-const ObjLoader2Scene = () => {
+const SimpleScene = () => {
   const mount = createRef<HTMLInputElement>()
   useEffect(() => {
     const scene = new THREE.Scene()
@@ -33,4 +33,4 @@ const ObjLoader2Scene = () => {
   }, [])
   return <div css={css``} ref={mount} />
 }
-export default ObjLoader2Scene
+export default SimpleScene
