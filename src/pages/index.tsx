@@ -9,16 +9,28 @@ import IndexLayout from '../layouts'
 // import GradientScene from '../components/three/GradientScene'
 // import PlaneLayerScene from '../components/three/PlaneLayerScene'
 import PeriodicTableScene from '../components/three/PeriodicTableScene'
-import PointDynamicScene from '../components/three/PointDynamicScene'
+import PointDynamicScene from '../components/three/PointDynamicScene2'
 import ObjLoaderScene from '../components/three/ObjLoaderScene'
-import GLTFScene from '../components/three/GLTFScene'
+import GLSLScene from '../components/three/GLSLScene'
 import BufferLineScene from '../components/three/BufferLineScene'
+import ZoomScene from '../components/three/ZoomScene'
+import BoxAnimationScene from '../components/three/BoxAnimationScene'
+import BlockchainAnimationScene from '../components/three/BlockchainAnimationScene'
+import MLAnimationScene from '../components/three/MLAnimationScene'
+import TownScene from '../components/three/TownScene'
+import PointLightScene from '../components/three/PointLightScene'
+import TessellationScene from '../components/three/TessellationScene'
 
 const IndexPage = () => {
   return (
     // <PeriodicTableScene />
-    // <PeriodicTableScene />
-    <BufferLineScene />
+    // <GLTFScene />
+    // <PointDynamicScene />
+    // <TownScene />
+    <TessellationScene />
+    // <GLSLScene />
+    // <PointLightScene />
+    // <BufferLineScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
