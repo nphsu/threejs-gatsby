@@ -79,7 +79,7 @@ const GLTFScene = () => {
       stats.update()
       composer.render()
     }
-    new GLTFLoader().load('./glTF/DamagedHelmet.gltf', function (gltf) {
+    new GLTFLoader().load('./glTF/DamagedHelmet.gltf', gltf => {
       console.log(gltf)
       const model = gltf.scene
 
