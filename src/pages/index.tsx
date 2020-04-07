@@ -5,7 +5,7 @@ import Container from '../components/Container'
 import IndexLayout from '../layouts'
 // Custom Scene
 // import BaseThreeScene from '../components/three/BaseThreeScene'
-// import MultiThreeScene from '../components/three/MultiThreeScene'
+import MultiThreeScene from '../components/three/MultiThreeScene'
 // import GradientScene from '../components/three/GradientScene'
 // import PlaneLayerScene from '../components/three/PlaneLayerScene'
 import PeriodicTableScene from '../components/three/PeriodicTableScene'
@@ -20,6 +20,11 @@ import MLAnimationScene from '../components/three/MLAnimationScene'
 import TownScene from '../components/three/TownScene'
 import PointLightScene from '../components/three/PointLightScene'
 import TessellationScene from '../components/three/TessellationScene'
+import AttributeLineScene from '../components/three/AttributeLineScene'
+import EffectsAnaglyphScene from '../components/three/EffectsAnaglyphScene'
+import WebGLShaderScene from '../components/three/WebGLShaderScene'
+import WebGLLineScene from '../components/three/WebGLLineScene'
+import InstancingScatterScene from '../components/three/InstancingScatterScene'
 
 const IndexPage = () => {
   return (
@@ -27,7 +32,11 @@ const IndexPage = () => {
     // <GLTFScene />
     // <PointDynamicScene />
     // <TownScene />
-    <TessellationScene />
+    // <AttributeLineScene />
+    // <EffectsAnaglyphScene />
+    // <WebGLLineScene />
+    <MultiThreeScene />
+    // <WebGLShaderScene />
     // <GLSLScene />
     // <PointLightScene />
     // <BufferLineScene />
