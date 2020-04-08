@@ -81,7 +81,7 @@ const MultiThreeScene = () => {
       if (!clicked) return false
 
       sliderMoved = true
-      sliderPos = e.pageX
+      sliderPos = e.pageX === undefined ? e.touches[0].pageX : e.pageX
 
       // prevent the slider from being positioned outside the window bounds
       if (sliderPos < 0) sliderPos = 0
