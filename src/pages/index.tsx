@@ -25,21 +25,12 @@ import EffectsAnaglyphScene from '../components/three/EffectsAnaglyphScene'
 import WebGLShaderScene from '../components/three/WebGLShaderScene'
 import WebGLLineScene from '../components/three/WebGLLineScene'
 import InstancingScatterScene from '../components/three/InstancingScatterScene'
+import OceanScene from '../components/three/OceanScene'
+import GeometryHierarchyScene from '../components/three/GeometryHierarchyScene'
 
 const IndexPage = () => {
   return (
-    // <PeriodicTableScene />
-    // <GLTFScene />
-    // <PointDynamicScene />
-    // <TownScene />
-    // <AttributeLineScene />
-    // <EffectsAnaglyphScene />
-    // <WebGLLineScene />
-    <MultiThreeScene />
-    // <WebGLShaderScene />
-    // <GLSLScene />
-    // <PointLightScene />
-    // <BufferLineScene />
+    <GeometryHierarchyScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
