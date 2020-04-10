@@ -27,10 +27,11 @@ import WebGLLineScene from '../components/three/WebGLLineScene'
 import InstancingScatterScene from '../components/three/InstancingScatterScene'
 import OceanScene from '../components/three/OceanScene'
 import GeometryHierarchyScene from '../components/three/GeometryHierarchyScene'
+import DrawRangeScene from '../components/three/DrawRangeScene'
 
 const IndexPage = () => {
   return (
-    <GeometryHierarchyScene />
+    <DrawRangeScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
