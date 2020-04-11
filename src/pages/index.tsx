@@ -28,10 +28,11 @@ import InstancingScatterScene from '../components/three/InstancingScatterScene'
 import OceanScene from '../components/three/OceanScene'
 import GeometryHierarchyScene from '../components/three/GeometryHierarchyScene'
 import DrawRangeScene from '../components/three/DrawRangeScene'
+import CrossfadeScene from '../components/three/CrossfadeScene'
 
 const IndexPage = () => {
   return (
-    <DrawRangeScene />
+    <CrossfadeScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
