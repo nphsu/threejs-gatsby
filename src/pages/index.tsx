@@ -29,10 +29,11 @@ import OceanScene from '../components/three/OceanScene'
 import GeometryHierarchyScene from '../components/three/GeometryHierarchyScene'
 import DrawRangeScene from '../components/three/DrawRangeScene'
 import CrossfadeScene from '../components/three/CrossfadeScene'
+import AttributePoint2Scene from '../components/three/AttributePoint2Scene'
 
 const IndexPage = () => {
   return (
-    <CrossfadeScene />
+    <AttributePoint2Scene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
