@@ -30,10 +30,11 @@ import GeometryHierarchyScene from '../components/three/GeometryHierarchyScene'
 import DrawRangeScene from '../components/three/DrawRangeScene'
 import CrossfadeScene from '../components/three/CrossfadeScene'
 import AttributePoint2Scene from '../components/three/AttributePoint2Scene'
+import CSS3DSpriteScene from '../components/three/CSS3DSpriteScene'
 
 const IndexPage = () => {
   return (
-    <AttributePoint2Scene />
+    <CSS3DSpriteScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
