@@ -32,10 +32,11 @@ import CrossfadeScene from '../components/three/CrossfadeScene'
 import AttributePoint2Scene from '../components/three/AttributePoint2Scene'
 import CSS3DSpriteScene from '../components/three/CSS3DSpriteScene'
 import RollercoasterScene from '../components/three/RollercoasterScene'
+import AnimationGroupsScene from '../components/three/AnimationGroupsScene'
 
 const IndexPage = () => {
   return (
-    <RollercoasterScene />
+    <AnimationGroupsScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
