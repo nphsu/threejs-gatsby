@@ -33,10 +33,11 @@ import AttributePoint2Scene from '../components/three/AttributePoint2Scene'
 import CSS3DSpriteScene from '../components/three/CSS3DSpriteScene'
 import RollercoasterScene from '../components/three/RollercoasterScene'
 import AnimationGroupsScene from '../components/three/AnimationGroupsScene'
+import SkinningMorphScene from '../components/three/SkinningMorphScene'
 
 const IndexPage = () => {
   return (
-    <AnimationGroupsScene />
+    <SkinningMorphScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
