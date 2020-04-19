@@ -37,10 +37,11 @@ import SkinningMorphScene from '../components/three/SkinningMorphScene'
 import GpgpuBirdsScene from '../components/three/GpgpuBirdsScene'
 import AttributePointScene from '../components/three/AttributePointScene'
 import AnimationClothScene from '../components/three/AnimationClothScene'
+import ClippingAdvancedScene from '../components/three/ClippingAdvancedScene'
 
 const IndexPage = () => {
   return (
-    <AnimationClothScene />
+    <ClippingAdvancedScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
