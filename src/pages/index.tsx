@@ -38,10 +38,11 @@ import GpgpuBirdsScene from '../components/three/GpgpuBirdsScene'
 import AttributePointScene from '../components/three/AttributePointScene'
 import AnimationClothScene from '../components/three/AnimationClothScene'
 import ClippingAdvancedScene from '../components/three/ClippingAdvancedScene'
+import PointWaveScene from '../components/three/PointWaveScene'
 
 const IndexPage = () => {
   return (
-    <ClippingAdvancedScene />
+    <PointWaveScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
