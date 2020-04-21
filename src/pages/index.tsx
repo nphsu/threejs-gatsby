@@ -39,10 +39,11 @@ import AttributePointScene from '../components/three/AttributePointScene'
 import AnimationClothScene from '../components/three/AnimationClothScene'
 import ClippingAdvancedScene from '../components/three/ClippingAdvancedScene'
 import PointWaveScene from '../components/three/PointWaveScene'
+import MiscLookAtScene from '../components/three/MiscLookAtScene'
 
 const IndexPage = () => {
   return (
-    <PointWaveScene />
+    <MiscLookAtScene />
     // <IndexLayout>
     //   <PeriodicTableScene />
     //   <Page>
