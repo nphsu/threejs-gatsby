@@ -2,7 +2,7 @@ import React, { useEffect, createRef } from 'react'
 import { css } from '@emotion/core'
 import * as THREE from 'three'
 import Stats from 'three/examples/jsm/libs/stats.module.js'
-import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js'
+// import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { stat } from 'fs'
 
@@ -77,59 +77,59 @@ const SkinningMorphScene = () => {
     }
 
     // gui
-    const createGUI = (model, animations) => {
-      const states = ['Idle', 'Walking', 'Running', 'Dance', 'Death', 'Sitting', 'Standing']
-      const emotes = ['Jump', 'Yes', 'No', 'Wave', 'Punch', 'ThumbsUp']
-      const gui = new GUI()
-      mixer = new THREE.AnimationMixer(model)
-      actions = {}
-      for (let i = 0; i < animations.length; i++) {
-        const clip = animations[i]
-        const action = mixer.clipAction(clip)
-        actions[clip.name] = action
-        if (emotes.indexOf(clip.name) >= 0 || states.indexOf(clip.name) >= 4) {
-          action.clampWhenFinished = true
-          action.loop = THREE.LoopOnce
-        }
-      }
-      // states
-      const statesFolder = gui.addFolder('States')
-      const clipCtrl = statesFolder.add(api, 'state').options(states)
-      clipCtrl.onChange(function () {
-        fadeToAction(api.state, 0.5)
-      })
-      statesFolder.open()
+    // const createGUI = (model, animations) => {
+    //   const states = ['Idle', 'Walking', 'Running', 'Dance', 'Death', 'Sitting', 'Standing']
+    //   const emotes = ['Jump', 'Yes', 'No', 'Wave', 'Punch', 'ThumbsUp']
+    //   const gui = new GUI()
+    //   mixer = new THREE.AnimationMixer(model)
+    //   actions = {}
+    //   for (let i = 0; i < animations.length; i++) {
+    //     const clip = animations[i]
+    //     const action = mixer.clipAction(clip)
+    //     actions[clip.name] = action
+    //     if (emotes.indexOf(clip.name) >= 0 || states.indexOf(clip.name) >= 4) {
+    //       action.clampWhenFinished = true
+    //       action.loop = THREE.LoopOnce
+    //     }
+    //   }
+    //   // states
+    //   const statesFolder = gui.addFolder('States')
+    //   const clipCtrl = statesFolder.add(api, 'state').options(states)
+    //   clipCtrl.onChange(function () {
+    //     fadeToAction(api.state, 0.5)
+    //   })
+    //   statesFolder.open()
 
-      // emotes
-      const emoteFolder = gui.addFolder('Emotes')
-      const restoreState = () => {
-        mixer.removeEventListener('finished', restoreState)
-        fadeToAction(api.state, 0.2)
-      }
-      const createEmoteCallback = name => {
-        api[name] = function () {
-          fadeToAction(name, 0.2)
-          mixer.addEventListener('finished', restoreState)
-        }
-        emoteFolder.add(api, name)
-      }
-      for (let i = 0; i < emotes.length; i++) {
-        createEmoteCallback(emotes[i])
-      }
-      emoteFolder.open()
+    //   // emotes
+    //   const emoteFolder = gui.addFolder('Emotes')
+    //   const restoreState = () => {
+    //     mixer.removeEventListener('finished', restoreState)
+    //     fadeToAction(api.state, 0.2)
+    //   }
+    //   const createEmoteCallback = name => {
+    //     api[name] = function () {
+    //       fadeToAction(name, 0.2)
+    //       mixer.addEventListener('finished', restoreState)
+    //     }
+    //     emoteFolder.add(api, name)
+    //   }
+    //   for (let i = 0; i < emotes.length; i++) {
+    //     createEmoteCallback(emotes[i])
+    //   }
+    //   emoteFolder.open()
 
-      // expressions
-      const face = model.getObjectByName('Head_2')
-      const expressions = Object.keys(face.morphTargetDictionary)
-      const expressionFolder = gui.addFolder('Expressions')
+    //   // expressions
+    //   const face = model.getObjectByName('Head_2')
+    //   const expressions = Object.keys(face.morphTargetDictionary)
+    //   const expressionFolder = gui.addFolder('Expressions')
 
-      for (let i = 0; i < expressions.length; i++) {
-        expressionFolder.add(face.morphTargetInfluences, i, 0, 1, 0.01).name(expressions[i])
-      }
-      activeAction = actions.Walking
-      activeAction.play()
-      expressionFolder.open()
-    }
+    //   for (let i = 0; i < expressions.length; i++) {
+    //     expressionFolder.add(face.morphTargetInfluences, i, 0, 1, 0.01).name(expressions[i])
+    //   }
+    //   activeAction = actions.Walking
+    //   activeAction.play()
+    //   expressionFolder.open()
+    // }
 
     const loader = new GLTFLoader()
     loader.load(

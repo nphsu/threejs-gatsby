@@ -1,7 +1,7 @@
 import React, { useEffect, createRef } from 'react'
 import { css } from '@emotion/core'
 import * as THREE from 'three'
-import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js'
+// import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js'
 import FXScene from './crossfade/FxScene'
 
 const clock = new THREE.Clock()
@@ -204,31 +204,31 @@ const CrossfadeScene = () => {
     const sceneB = new FXScene('sphere', 500, 2000, 50, new THREE.Vector3(0, 0.2, 0.1), 0x000000)
     const transition = new Transition(sceneA, sceneB)
 
-    const initGUI = () => {
-      const gui = new GUI()
+    // const initGUI = () => {
+    //   const gui = new GUI()
 
-      gui.add(transitionParams, 'useTexture').onChange(function (value) {
-        transition.useTexture(value)
-      })
+    //   gui.add(transitionParams, 'useTexture').onChange(function (value) {
+    //     transition.useTexture(value)
+    //   })
 
-      gui.add(transitionParams, 'loopTexture')
+    //   gui.add(transitionParams, 'loopTexture')
 
-      gui
-        .add(transitionParams, 'texture', { Perlin: 0, Squares: 1, Cells: 2, Distort: 3, Gradient: 4, Radial: 5 })
-        .onChange(function (value) {
-          transition.setTexture(value)
-        })
-        .listen()
+    //   gui
+    //     .add(transitionParams, 'texture', { Perlin: 0, Squares: 1, Cells: 2, Distort: 3, Gradient: 4, Radial: 5 })
+    //     .onChange(function (value) {
+    //       transition.setTexture(value)
+    //     })
+    //     .listen()
 
-      gui.add(transitionParams, 'textureThreshold', 0, 1, 0.01).onChange(function (value) {
-        transition.setTextureThreshold(value)
-      })
+    //   gui.add(transitionParams, 'textureThreshold', 0, 1, 0.01).onChange(function (value) {
+    //     transition.setTextureThreshold(value)
+    //   })
 
-      gui.add(transitionParams, 'animateTransition')
-      gui.add(transitionParams, 'transition', 0, 1, 0.01).listen()
-      gui.add(transitionParams, 'transitionSpeed', 0.5, 5, 0.01)
-    }
-    initGUI()
+    //   gui.add(transitionParams, 'animateTransition')
+    //   gui.add(transitionParams, 'transition', 0, 1, 0.01).listen()
+    //   gui.add(transitionParams, 'transitionSpeed', 0.5, 5, 0.01)
+    // }
+    // initGUI()
 
     const render = () => {
       transition.render(clock.getDelta(), renderer)
