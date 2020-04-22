@@ -42,6 +42,6 @@ import MiscLookAtScene from '../components/three/MiscLookAtScene'
 
 export default () => (
   <>
-    <ClippingAdvancedScene />
+    <OceanScene />
   </>
 )
