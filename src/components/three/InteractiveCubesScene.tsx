@@ -184,8 +184,8 @@ const InteractiveCubesScene = () => {
       camera.setViewOffset(
         renderer.domElement.width,
         renderer.domElement.height,
-        (mouse.x * window.devicePixelRatio) | 0,
-        (mouse.y * window.devicePixelRatio) | 0,
+        mouse.x * window.devicePixelRatio || 0,
+        mouse.y * window.devicePixelRatio || 0,
         1,
         1
       )
