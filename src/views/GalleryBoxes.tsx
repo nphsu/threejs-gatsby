@@ -142,9 +142,9 @@ const GalleryBoxes = () => {
       <Link to="/attribute-point2">
         <ImageSceneBox images={data.attributePoint2.childImageSharp.fixed} />
       </Link>
-      <Link to="/crossfade">
+      {/* <Link to="/crossfade">
         <ImageSceneBox images={data.crossfade.childImageSharp.fixed} />
-      </Link>
+      </Link> */}
       <Link to="/draw-range">
         <ImageSceneBox images={data.drawRange.childImageSharp.fixed} />
       </Link>

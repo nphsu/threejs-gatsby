@@ -1,11 +1,11 @@
-import React from 'react'
+// import React from 'react'
 
-import GalleryBoxes from '../views/GalleryBoxes'
-import CrossfadeScene from '../components/three/CrossfadeScene'
+// import GalleryBoxes from '../views/GalleryBoxes'
+// import CrossfadeScene from '../components/three/CrossfadeScene'
 
-export default () => (
-  <>
-    <GalleryBoxes />
-    <CrossfadeScene />
-  </>
-)
+// export default () => (
+//   <>
+//     <GalleryBoxes />
+//     <CrossfadeScene />
+//   </>
+// )
