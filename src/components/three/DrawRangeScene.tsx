@@ -2,7 +2,7 @@ import React, { useEffect, createRef } from 'react'
 import { css } from '@emotion/core'
 import * as THREE from 'three'
 import Stats from 'three/examples/jsm/libs/stats.module.js'
-import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js'
+// import { GUI } from 'three/examples/jsm/libs/dat.gui.module.js'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 
 const createDefaultCamera = () => {
@@ -34,7 +34,7 @@ const DrawRangeScene = () => {
   let linesMesh
 
   const maxParticleCount = 1000
-  let particleCount = 500
+  const particleCount = 500
   const r = 800
   const rHalf = r / 2
 
@@ -47,26 +47,26 @@ const DrawRangeScene = () => {
     particleCount: 500
   }
 
-  const initGUI = () => {
-    const gui = new GUI()
+  // const initGUI = () => {
+  //   const gui = new GUI()
 
-    gui.add(effectController, 'showDots').onChange(function (value) {
-      pointCloud.visible = value
-    })
-    gui.add(effectController, 'showLines').onChange(function (value) {
-      linesMesh.visible = value
-    })
-    gui.add(effectController, 'minDistance', 10, 300)
-    gui.add(effectController, 'limitConnections')
-    gui.add(effectController, 'maxConnections', 0, 30, 1)
-    gui.add(effectController, 'particleCount', 0, maxParticleCount, 1).onChange(function (value) {
-      particleCount = parseInt(value)
-      particles.setDrawRange(0, particleCount)
-    })
-    return gui
-  }
+  //   gui.add(effectController, 'showDots').onChange(function (value) {
+  //     pointCloud.visible = value
+  //   })
+  //   gui.add(effectController, 'showLines').onChange(function (value) {
+  //     linesMesh.visible = value
+  //   })
+  //   gui.add(effectController, 'minDistance', 10, 300)
+  //   gui.add(effectController, 'limitConnections')
+  //   gui.add(effectController, 'maxConnections', 0, 30, 1)
+  //   gui.add(effectController, 'particleCount', 0, maxParticleCount, 1).onChange(function (value) {
+  //     particleCount = parseInt(value)
+  //     particles.setDrawRange(0, particleCount)
+  //   })
+  //   return gui
+  // }
   useEffect(() => {
-    initGUI()
+    // initGUI()
     const scene = new THREE.Scene()
     const camera = createDefaultCamera()
     const controls = new OrbitControls(camera, mount.current!)
