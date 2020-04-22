@@ -39,9 +39,10 @@ import AnimationClothScene from '../components/three/AnimationClothScene'
 import ClippingAdvancedScene from '../components/three/ClippingAdvancedScene'
 import PointWaveScene from '../components/three/PointWaveScene'
 import MiscLookAtScene from '../components/three/MiscLookAtScene'
+import InteractiveCubesScene from '../components/three/InteractiveCubesScene'
 
 export default () => (
   <>
-    <OceanScene />
+    <InteractiveCubesScene />
   </>
 )
