@@ -40,9 +40,10 @@ import ClippingAdvancedScene from '../components/three/ClippingAdvancedScene'
 import PointWaveScene from '../components/three/PointWaveScene'
 import MiscLookAtScene from '../components/three/MiscLookAtScene'
 import InteractiveCubesScene from '../components/three/InteractiveCubesScene'
+import DiskFieldAnimation from '../components/three/original/DiskFeild'
 
 export default () => (
   <>
-    <InteractiveCubesScene />
+    <DiskFieldAnimation />
   </>
 )
