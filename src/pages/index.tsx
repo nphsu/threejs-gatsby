@@ -41,9 +41,10 @@ import PointWaveScene from '../components/three/PointWaveScene'
 import MiscLookAtScene from '../components/three/MiscLookAtScene'
 import InteractiveCubesScene from '../components/three/InteractiveCubesScene'
 import DiskFieldAnimation from '../components/three/original/DiskFeild'
+import InteractivePointScene from '../components/three/InteractivePointScene'
 
 export default () => (
   <>
-    <DiskFieldAnimation />
+    <InteractivePointScene />
   </>
 )
