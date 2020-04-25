@@ -42,9 +42,10 @@ import MiscLookAtScene from '../components/three/MiscLookAtScene'
 import InteractiveCubesScene from '../components/three/InteractiveCubesScene'
 import DiskFieldAnimation from '../components/three/original/DiskFeild'
 import InteractivePointScene from '../components/three/InteractivePointScene'
+import TestMemoryScene from '../components/three/TestMemoryScene'
 
 export default () => (
   <>
-    <InteractivePointScene />
+    <TestMemoryScene />
   </>
 )
