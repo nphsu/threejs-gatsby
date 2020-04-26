@@ -19,6 +19,7 @@
 
 - Three.js
 - TypeScript
+- Tailwind CSS
 - ESLint (with custom ESLint rules)
 - Markdown rendering with Remark
 - Basic component structure
