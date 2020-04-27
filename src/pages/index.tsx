@@ -44,9 +44,11 @@ import DiskFieldAnimation from '../components/three/original/DiskFeild'
 import InteractivePointScene from '../components/three/InteractivePointScene'
 import TestMemoryScene from '../components/three/TestMemoryScene'
 import YouTubeScene from '../components/three/YoutubeScene'
+import PostprocessingAdvancedScene from '../components/three/PostprocessingAdvancedScene'
+import AfterImageScene from '../components/three/AfterImageScene'
 
 export default () => (
   <>
-    <YouTubeScene />
+    <AfterImageScene />
   </>
 )
