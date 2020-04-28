@@ -46,9 +46,10 @@ import TestMemoryScene from '../components/three/TestMemoryScene'
 import YouTubeScene from '../components/three/YoutubeScene'
 import PostprocessingAdvancedScene from '../components/three/PostprocessingAdvancedScene'
 import AfterImageScene from '../components/three/AfterImageScene'
+import PostprocessingGlitchSceme from '../components/three/PostprocessingGlitchSceme'
 
 export default () => (
   <>
-    <AfterImageScene />
+    <PostprocessingGlitchSceme />
   </>
 )
