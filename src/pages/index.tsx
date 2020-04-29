@@ -47,9 +47,10 @@ import YouTubeScene from '../components/three/YoutubeScene'
 import PostprocessingAdvancedScene from '../components/three/PostprocessingAdvancedScene'
 import AfterImageScene from '../components/three/AfterImageScene'
 import PostprocessingGlitchSceme from '../components/three/PostprocessingGlitchSceme'
+import AnimationRubiksCubeScene from '../components/three/AnimationRubiksCubeScene'
 
 export default () => (
   <>
-    <PostprocessingGlitchSceme />
+    <AnimationRubiksCubeScene />
   </>
 )
