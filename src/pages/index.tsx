@@ -49,9 +49,10 @@ import AfterImageScene from '../components/three/AfterImageScene'
 import PostprocessingGlitchSceme from '../components/three/PostprocessingGlitchSceme'
 import AnimationRubiksCubeScene from '../components/three/AnimationRubiksCubeScene'
 import EffectsAsciiScene from '../components/three/EffectsAsciiScene'
+import CubemapScene from '../components/three/CubemapScene'
 
 export default () => (
   <>
-    <EffectsAsciiScene />
+    <CubemapScene />
   </>
 )
