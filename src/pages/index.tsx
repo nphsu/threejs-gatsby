@@ -50,9 +50,10 @@ import PostprocessingGlitchSceme from '../components/three/PostprocessingGlitchS
 import AnimationRubiksCubeScene from '../components/three/AnimationRubiksCubeScene'
 import EffectsAsciiScene from '../components/three/EffectsAsciiScene'
 import CubemapScene from '../components/three/CubemapScene'
+import PhysicalTransparencyScene from '../components/three/PhysicalTransparencyScene'
 
 export default () => (
   <>
-    <CubemapScene />
+    <PhysicalTransparencyScene />
   </>
 )
