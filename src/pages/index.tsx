@@ -52,9 +52,10 @@ import EffectsAsciiScene from '../components/three/EffectsAsciiScene'
 import CubemapScene from '../components/three/CubemapScene'
 import PhysicalTransparencyScene from '../components/three/PhysicalTransparencyScene'
 import SpotlightsScene from '../components/three/SpotlightsScene'
+import PointlightsScene from '../components/three/PointlightsScene'
 
 export default () => (
   <>
-    <SpotlightsScene />
+    <PointlightsScene />
   </>
 )
