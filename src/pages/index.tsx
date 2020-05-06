@@ -53,9 +53,10 @@ import CubemapScene from '../components/three/CubemapScene'
 import PhysicalTransparencyScene from '../components/three/PhysicalTransparencyScene'
 import SpotlightsScene from '../components/three/SpotlightsScene'
 import PointlightsScene from '../components/three/PointlightsScene'
+import KinectScene from '../components/three/KinectScene'
 
 export default () => (
   <>
-    <PointlightsScene />
+    <KinectScene />
   </>
 )
