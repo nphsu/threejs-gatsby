@@ -54,9 +54,11 @@ import PhysicalTransparencyScene from '../components/three/PhysicalTransparencyS
 import SpotlightsScene from '../components/three/SpotlightsScene'
 import PointlightsScene from '../components/three/PointlightsScene'
 import KinectScene from '../components/three/KinectScene'
+import LavaScene from '../components/three/LavaScene'
+import BuffergeometryInstancingScene from '../components/three/BuffergeometryInstancingScene'
 
 export default () => (
   <>
-    <KinectScene />
+    <BuffergeometryInstancingScene />
   </>
 )
