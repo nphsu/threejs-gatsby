@@ -56,9 +56,11 @@ import PointlightsScene from '../components/three/PointlightsScene'
 import KinectScene from '../components/three/KinectScene'
 import LavaScene from '../components/three/LavaScene'
 import BuffergeometryInstancingScene from '../components/three/BuffergeometryInstancingScene'
+import SimpleGIScene from '../components/three/SimpleGIScene'
+import LoaderNodeScene from '../components/three/LoaderNodeScene'
 
 export default () => (
   <>
-    <BuffergeometryInstancingScene />
+    <LoaderNodeScene />
   </>
 )
