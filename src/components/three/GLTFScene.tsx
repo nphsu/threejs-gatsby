@@ -91,6 +91,7 @@ const GLTFScene = () => {
           scene.add(newMesh)
 
           mount.current!.addEventListener('click', () => changeColor(mouseX, mouseY, newMesh), true)
+          mount.current!.addEventListener('touchend', () => changeColor(mouseX, mouseY, newMesh))
 
           roughnessMipmapper.dispose()
 
