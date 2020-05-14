@@ -108,6 +108,13 @@ const GalleryBoxes = () => {
           }
         }
       }
+      gltf: file(relativePath: { eq: "scenes/gltf.png" }) {
+        childImageSharp {
+          fixed(width: 100, height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
     }
   `)
   return (
@@ -150,6 +157,9 @@ const GalleryBoxes = () => {
       </Link>
       <Link to="/ocean">
         <ImageSceneBox images={data.ocean.childImageSharp.fixed} />
+      </Link>
+      <Link to="/gltf">
+        <ImageSceneBox images={data.gltf.childImageSharp.fixed} />
       </Link>
     </>
   )

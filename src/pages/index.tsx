@@ -57,10 +57,11 @@ import KinectScene from '../components/three/KinectScene'
 import LavaScene from '../components/three/LavaScene'
 import BuffergeometryInstancingScene from '../components/three/BuffergeometryInstancingScene'
 import SimpleGIScene from '../components/three/SimpleGIScene'
-import LoaderNodeScene from '../components/three/LoaderNodeScene'
+// import LoaderNodeScene from '../components/three/LoaderNodeScene'
+import GLTFScene from '../components/three/GLTFScene'
 
 export default () => (
   <>
-    <LoaderNodeScene />
+    <GLTFScene />
   </>
 )
