@@ -59,9 +59,10 @@ import BuffergeometryInstancingScene from '../components/three/BuffergeometryIns
 import SimpleGIScene from '../components/three/SimpleGIScene'
 // import LoaderNodeScene from '../components/three/LoaderNodeScene'
 import GLTFScene from '../components/three/GLTFScene'
+import LoaderMd2Scene from '../components/three/LoaderMd2Scene'
 
 export default () => (
   <>
-    <GLTFScene />
+    <LoaderMd2Scene />
   </>
 )
